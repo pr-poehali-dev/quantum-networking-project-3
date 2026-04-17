@@ -15,7 +15,7 @@ const data = {
     story: "#",
     team: "#",
     portfolio: "#",
-    careers: "#",
+    careers: "https://ok.ru/profile/572872647252/statuses/157452607379540",
   },
   help: {
     faqs: "#",
