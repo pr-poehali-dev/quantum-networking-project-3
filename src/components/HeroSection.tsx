@@ -412,7 +412,7 @@ const HeroSection: React.FC = () => {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 105%;
+          width: 88%;
           height: auto;
           z-index: 2;
           border-radius: 12px;

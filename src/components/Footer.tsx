@@ -427,26 +427,6 @@ export default function Footer() {
               </div>
 
               <div className="link-column">
-                <h3>Ресурсы</h3>
-                <ul className="link-list">
-                  {helpfulLinks.map(({ text, href, hasIndicator }) => (
-                    <li key={text} className="link-item">
-                      <a href={href}>
-                        {hasIndicator ? (
-                          <span className="live-indicator">
-                            {text}
-                            <span className="pulse-dot"></span>
-                          </span>
-                        ) : (
-                          text
-                        )}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="link-column">
                 <h3>Контакты</h3>
                 <ul className="link-list">
                   <li className="link-item">
