@@ -1,36 +1,36 @@
 import { Facebook, Instagram, Twitter, Github, Mail, MapPin, Phone } from "lucide-react"
 
 const data = {
-  facebookLink: "https://facebook.com/digitalhub",
-  instaLink: "https://instagram.com/digitalhub",
-  twitterLink: "https://twitter.com/digitalhub",
-  githubLink: "https://github.com/digitalhub",
+  facebookLink: "https://ok.ru/profile/572872647252/statuses/157452607379540",
+  instaLink: "https://ok.ru/group/56567832182852/messages",
+  twitterLink: "https://wa.me/79520672014",
+  githubLink: "https://wa.me/79520672014",
   services: {
-    web: "/web-razrabotka",
-    mobile: "/mobilnye-prilozheniya",
-    design: "/ui-ux-dizajn",
-    marketing: "/digital-marketing",
+    web: "#",
+    mobile: "#",
+    design: "#",
+    marketing: "#",
   },
   about: {
-    story: "/o-nas",
-    team: "/komanda",
-    portfolio: "/portfolio",
-    careers: "/vakansii",
+    story: "#",
+    team: "#",
+    portfolio: "#",
+    careers: "#",
   },
   help: {
-    faqs: "/faq",
-    support: "/podderzhka",
-    blog: "/blog",
+    faqs: "#",
+    support: "https://ok.ru/group/56567832182852/messages",
+    blog: "https://ok.ru/profile/572872647252/statuses/157452607379540",
   },
   contact: {
-    email: "hello@digitalhub.ru",
-    phone: "+7 (495) 123-45-67",
-    address: "Москва, Россия",
+    email: "ok.ru/group/56567832182852/messages",
+    phone: "+7-952-067-20-14",
+    address: "Доставка по всей России",
   },
   company: {
-    name: "ДиджиталХаб",
+    name: "АлмазМозаика",
     description:
-      "Создаём цифровые продукты, которые помогают бизнесу расти. Веб-разработка, мобильные приложения и дизайн под ключ.",
+      "Превращаем ваши любимые фото в уникальные алмазные мозаики. Бесплатный макет, индивидуальный подход, доставка по всей России.",
   },
 }
 
@@ -43,22 +43,22 @@ const socialLinks = [
 
 const aboutLinks = [
   { text: "О нас", href: data.about.story },
-  { text: "Команда", href: data.about.team },
-  { text: "Портфолио", href: data.about.portfolio },
-  { text: "Вакансии", href: data.about.careers },
+  { text: "Как это работает", href: data.about.team },
+  { text: "Примеры работ", href: data.about.portfolio },
+  { text: "Отзывы", href: data.about.careers },
 ]
 
 const serviceLinks = [
-  { text: "Веб-разработка", href: data.services.web },
-  { text: "Мобильные приложения", href: data.services.mobile },
-  { text: "UI/UX Дизайн", href: data.services.design },
-  { text: "Digital-маркетинг", href: data.services.marketing },
+  { text: "Мозаика из фото", href: data.services.web },
+  { text: "Размеры и цены", href: data.services.mobile },
+  { text: "Круглые стразы", href: data.services.design },
+  { text: "Квадратные стразы", href: data.services.marketing },
 ]
 
 const helpfulLinks = [
   { text: "FAQ", href: data.help.faqs },
-  { text: "Поддержка", href: data.help.support },
-  { text: "Блог", href: data.help.blog, hasIndicator: true },
+  { text: "Написать нам", href: data.help.support },
+  { text: "Сообщество ОК", href: data.help.blog, hasIndicator: true },
 ]
 
 const contactInfo = [
@@ -396,7 +396,7 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-brand">
               <div className="brand-logo">
-                <div className="brand-icon">DH</div>
+                <div className="brand-icon">АМ</div>
                 <span className="brand-name">{data.company.name}</span>
               </div>
               <p className="brand-description">{data.company.description}</p>
@@ -411,7 +411,7 @@ export default function Footer() {
 
             <div className="footer-links">
               <div className="link-column">
-                <h3>О компании</h3>
+                <h3>Информация</h3>
                 <ul className="link-list">
                   {aboutLinks.map(({ text, href }) => (
                     <li key={text} className="link-item">
@@ -422,7 +422,7 @@ export default function Footer() {
               </div>
 
               <div className="link-column">
-                <h3>Услуги</h3>
+                <h3>Мозаики</h3>
                 <ul className="link-list">
                   {serviceLinks.map(({ text, href }) => (
                     <li key={text} className="link-item">

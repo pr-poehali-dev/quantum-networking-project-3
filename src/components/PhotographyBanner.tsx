@@ -6,7 +6,7 @@ const PhotographyBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
 
-  const texts = ["БИЗНЕС.", "БРЕНДЫ."]
+  const texts = ["МОЗАИКУ.", "ШЕДЕВР."]
 
   useEffect(() => {
     const typeSpeed = isDeleting ? 40 : 100
@@ -828,7 +828,7 @@ const PhotographyBanner: React.FC = () => {
             <div className="left-part">
               <h1>
                 <span className="d-flex">
-                  {["С", "О", "З", "Д", "А", "Ё", "М"].map((char, index) => (
+                  {["С", "О", "З", "Д", "А", "Й", "Т", "Е"].map((char, index) => (
                     <span key={index} className="char tracking-tighter" style={{ animationDelay: `${index * 0.08}s` }}>
                       {char === " " ? "\u00A0" : char}
                     </span>
@@ -837,10 +837,10 @@ const PhotographyBanner: React.FC = () => {
                 <span className="text tracking-tighter">{currentText}</span>
               </h1>
               <p className="tracking-widest">
-                Помогаем предпринимателям запускать цифровые продукты быстрее с помощью современных технологий
+                Превратите любимое фото в алмазную мозаику. Бесплатный макет — оплата только после вашего одобрения!
               </p>
               <a href="#cta" className="book-link">
-                <span className="linktext tracking-tighter text-3xl">Начать проект</span>
+                <span className="linktext tracking-tighter text-3xl">Заказать макет</span>
                 <span className="arrow">
                   <span></span>
                 </span>
@@ -882,48 +882,53 @@ const PhotographyBanner: React.FC = () => {
                   style={{ filter: "hue-rotate(280deg) saturate(1.5)" }}
                 />
               </div>
+              <img
+                className="hero-image"
+                src="https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/files/463196bf-c932-42f6-8434-7ac6a2e26cc1.jpg"
+                alt="Алмазная мозаика"
+              />
             </div>
           </section>
 
           <section className="features-section">
             <div className="features-container">
               <div className="features-content">
-                <h2>Почему выбирают нас?</h2>
+                <h2>Почему <span className="highlight">выбирают</span> нас?</h2>
               </div>
               <ul className="features-list">
                 <li className="feature-item">
                   <div className="feature-icon">01</div>
                   <div className="feature-text">
-                    <h3>Опытная команда</h3>
+                    <h3>Бесплатный макет</h3>
                     <p className="font-light tracking-wider">
-                      Более 10 лет опыта в разработке цифровых продуктов для бизнеса любого масштаба
+                      Вы видите результат до оплаты — полный контроль над вашим заказом
                     </p>
                   </div>
                 </li>
                 <li className="feature-item">
                   <div className="feature-icon">02</div>
                   <div className="feature-text">
-                    <h3>Современные технологии</h3>
+                    <h3>Быстро: 1-2 дня</h3>
                     <p className="tracking-wider">
-                      Используем передовые инструменты и фреймворки для создания быстрых и надёжных решений
+                      Макет готов уже через 1-2 дня — быстро увидите свою будущую картину
                     </p>
                   </div>
                 </li>
                 <li className="feature-item">
                   <div className="feature-icon">03</div>
                   <div className="feature-text">
-                    <h3>Индивидуальный подход</h3>
+                    <h3>Круглые или квадратные</h3>
                     <p className="tracking-wider">
-                      Каждый проект уникален — мы адаптируем решения под ваши конкретные задачи и цели
+                      Выбирайте форму страз и размер холста под ваши пожелания
                     </p>
                   </div>
                 </li>
                 <li className="feature-item">
                   <div className="feature-icon">04</div>
                   <div className="feature-text">
-                    <h3>Поддержка 24/7</h3>
+                    <h3>Доставка по России</h3>
                     <p className="tracking-wider">
-                      Обеспечиваем техническую поддержку и сопровождение на всех этапах работы
+                      Отправляем готовый набор и мозаику Почтой России по всей стране
                     </p>
                   </div>
                 </li>
@@ -937,73 +942,73 @@ const PhotographyBanner: React.FC = () => {
               <div className="testimonials-marquee">
                 <div className="testimonial-card">
                   <p className="testimonial-quote">
-                    "Команда полностью изменила наш подход к цифровому присутствию. Результаты превзошли все ожидания."
+                    "Заказала мозаику с фото дочки — просто восторг! Макет прислали на следующий день, всё согласовали быстро."
                   </p>
                   <div className="testimonial-author">
-                    <div className="author-avatar">АС</div>
+                    <div className="author-avatar">ЕМ</div>
                     <div className="author-info">
-                      <h4>Алексей Смирнов</h4>
-                      <p>Директор по развитию</p>
+                      <h4>Елена Михайлова</h4>
+                      <p>Мама двоих детей</p>
                     </div>
                   </div>
                 </div>
                 <div className="testimonial-card">
                   <p className="testimonial-quote">
-                    "Профессиональный подход и внимание к деталям. Запустили проект в рекордные сроки без потери качества."
+                    "Подарила мужу мозаику с нашим свадебным фото. Он был в слезах от счастья. Качество превосходное!"
                   </p>
                   <div className="testimonial-author">
-                    <div className="author-avatar">МК</div>
+                    <div className="author-avatar">НС</div>
                     <div className="author-info">
-                      <h4>Мария Козлова</h4>
-                      <p>Основатель стартапа</p>
+                      <h4>Наталья Соколова</h4>
+                      <p>Постоянный клиент</p>
                     </div>
                   </div>
                 </div>
                 <div className="testimonial-card">
                   <p className="testimonial-quote">
-                    "От идеи до запуска — всё прошло гладко. Рекомендую всем, кто ценит качество и скорость."
+                    "Уже третий заказ! Увлекательное хобби и отличный подарок. Рекомендую всем!"
                   </p>
                   <div className="testimonial-author">
-                    <div className="author-avatar">ДВ</div>
+                    <div className="author-avatar">ОП</div>
                     <div className="author-info">
-                      <h4>Дмитрий Волков</h4>
-                      <p>Предприниматель</p>
+                      <h4>Ольга Петрова</h4>
+                      <p>Мастерица рукоделия</p>
                     </div>
                   </div>
                 </div>
                 <div className="testimonial-card">
                   <p className="testimonial-quote">
-                    "Команда полностью изменила наш подход к цифровому присутствию. Результаты превзошли все ожидания."
+                    "Заказала мозаику с фото дочки — просто восторг! Макет прислали на следующий день, всё согласовали быстро."
                   </p>
                   <div className="testimonial-author">
-                    <div className="author-avatar">АС</div>
+                    <div className="author-avatar">ЕМ</div>
                     <div className="author-info">
-                      <h4>Алексей Смирнов</h4>
-                      <p>Директор по развитию</p>
+                      <h4>Елена Михайлова</h4>
+                      <p>Мама двоих детей</p>
                     </div>
                   </div>
                 </div>
                 <div className="testimonial-card">
                   <p className="testimonial-quote">
-                    "Профессиональный подход и внимание к деталям. Запустили проект в рекордные сроки без потери качества."
+                    "Подарила мужу мозаику с нашим свадебным фото. Он был в слезах от счастья. Качество превосходное!"
                   </p>
                   <div className="testimonial-author">
-                    <div className="author-avatar">МК</div>
+                    <div className="author-avatar">НС</div>
                     <div className="author-info">
-                      <h4>Мария Козлова</h4>
-                      <p>Основатель стартапа</p>
+                      <h4>Наталья Соколова</h4>
+                      <p>Постоянный клиент</p>
                     </div>
                   </div>
                 </div>
                 <div className="testimonial-card">
                   <p className="testimonial-quote">
-                    "От идеи до запуска — всё прошло гладко. Рекомендую всем, кто ценит качество и скорость."
+                    "Уже третий заказ! Увлекательное хобби и отличный подарок. Рекомендую всем!"
                   </p>
                   <div className="testimonial-author">
-                    <div className="author-avatar">ДВ</div>
+                    <div className="author-avatar">ОП</div>
                     <div className="author-info">
-                      <h4>Дмитрий Волков</h4>
-                      <p>Предприниматель</p>
+                      <h4>Ольга Петрова</h4>
+                      <p>Мастерица рукоделия</p>
                     </div>
                   </div>
                 </div>
@@ -1013,16 +1018,16 @@ const PhotographyBanner: React.FC = () => {
 
           <section className="cta-section" id="cta">
             <div className="cta-container">
-              <h2 className="cta-title text-center">Готовы начать?</h2>
+              <h2 className="cta-title text-center">Заказать мозаику</h2>
               <p className="cta-subtitle">
-                Присоединяйтесь к сотням компаний, которые уже трансформировали свой бизнес. Ваш путь к успеху начинается здесь.
+                Присылайте фото в WhatsApp/Telegram +7-952-067-20-14 или пишите в личные сообщения. Макет бесплатно!
               </p>
               <div className="cta-buttons">
-                <a href="#" className="cta-button">
-                  Обсудить проект
+                <a href="https://wa.me/79520672014" className="cta-button">
+                  Написать в WhatsApp
                 </a>
-                <a href="#" className="cta-button secondary">
-                  Посмотреть кейсы
+                <a href="https://ok.ru/profile/572872647252/statuses/157452607379540" className="cta-button secondary">
+                  Наше сообщество
                 </a>
               </div>
             </div>
