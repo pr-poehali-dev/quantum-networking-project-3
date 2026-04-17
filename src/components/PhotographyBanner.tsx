@@ -44,42 +44,13 @@ const PhotographyBanner: React.FC = () => {
 
         .photography-banner {
           margin: 0;
-          background-color: #0a0014;
+          background-color: #002b36;
+          background-image: url("https://www.yudiz.com/codepen/photography-banner/frame.png");
+          background-size: cover;
+          background-repeat: no-repeat;
           overflow-x: hidden;
           min-height: 100vh;
           width: 100%;
-          position: relative;
-        }
-
-        .mosaic-bg {
-          position: fixed;
-          inset: 0;
-          z-index: 0;
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, 1fr);
-          width: 100%;
-          height: 100%;
-          opacity: 0.18;
-          filter: blur(2px) saturate(1.4);
-        }
-
-        .mosaic-bg img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .mosaic-bg-overlay {
-          position: fixed;
-          inset: 0;
-          z-index: 0;
-          background: linear-gradient(135deg, rgba(10,0,20,0.82) 0%, rgba(211,54,130,0.18) 50%, rgba(10,0,20,0.92) 100%);
-        }
-
-        .photography-banner > * {
-          position: relative;
-          z-index: 1;
         }
 
         .photography-banner *::selection {
@@ -852,15 +823,6 @@ const PhotographyBanner: React.FC = () => {
       `}</style>
 
       <div className="photography-banner">
-        <div className="mosaic-bg">
-          <img src="https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/files/adc0ee29-e546-429f-b89c-3da953c986fc.jpg" alt="" />
-          <img src="https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/files/4a62fcd4-b76d-4c0d-9164-ed782c27e88c.jpg" alt="" />
-          <img src="https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/files/d3546172-e103-4f7b-a22d-bb86ac20d500.jpg" alt="" />
-          <img src="https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/files/adc0ee29-e546-429f-b89c-3da953c986fc.jpg" alt="" />
-          <img src="https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/files/4a62fcd4-b76d-4c0d-9164-ed782c27e88c.jpg" alt="" />
-          <img src="https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/files/d3546172-e103-4f7b-a22d-bb86ac20d500.jpg" alt="" />
-        </div>
-        <div className="mosaic-bg-overlay"></div>
         <main>
           <section className="info-section">
             <div className="left-part">
