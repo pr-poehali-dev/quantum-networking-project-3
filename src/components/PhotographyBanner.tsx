@@ -1158,7 +1158,7 @@ const PhotographyBanner: React.FC = () => {
             <div className="cta-container">
               <h2 className="cta-title text-center">Заказать мозаику</h2>
               <p className="cta-subtitle">
-                Присылайте фото в WhatsApp/Telegram +7-952-067-20-14 или пишите в личные сообщения. Макет бесплатно!
+                Присылайте фото в WhatsApp/Telegram/МАХ +7-952-067-20-14 или пишите в личные сообщения. Макет бесплатно!
               </p>
               <div className="cta-buttons">
                 <a href="https://ok.ru/group/56567832182852/messages" target="_blank" rel="noopener noreferrer" className="cta-button">
