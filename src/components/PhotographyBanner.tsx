@@ -794,6 +794,112 @@ const PhotographyBanner: React.FC = () => {
           }
         }
 
+        .price-section {
+          padding: 80px 20px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .price-container {
+          max-width: 680px;
+          margin: 0 auto;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(201, 168, 76, 0.3);
+          border-radius: 24px;
+          padding: 50px 50px;
+          backdrop-filter: blur(10px);
+          text-align: center;
+        }
+
+        .price-top-title {
+          font-family: "Montserrat", sans-serif;
+          font-size: clamp(13px, 2vw, 16px);
+          font-weight: 700;
+          letter-spacing: 0.3em;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.6);
+          margin: 0 0 12px;
+        }
+
+        .price-divider {
+          width: 120px;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+          margin: 0 auto 20px;
+        }
+
+        .price-main-title {
+          font-family: "Montserrat", sans-serif;
+          font-size: clamp(32px, 6vw, 54px);
+          font-weight: 700;
+          color: #fff;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          margin: 0 0 24px;
+        }
+
+        .price-divider-bottom {
+          width: 180px;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+          margin: 0 auto 36px;
+        }
+
+        .price-table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+
+        .price-row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 0;
+          border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .price-row:last-child {
+          border-bottom: none;
+        }
+
+        .size-col {
+          width: 160px;
+          text-align: right;
+          padding-right: 30px;
+          font-family: "Montserrat", sans-serif;
+          font-size: clamp(16px, 2.5vw, 20px);
+          color: rgba(255,255,255,0.85);
+          font-weight: 400;
+        }
+
+        .gold-bar {
+          width: 2px;
+          background: linear-gradient(180deg, transparent, #c9a84c, transparent);
+          height: 28px;
+          flex-shrink: 0;
+        }
+
+        .price-col {
+          width: 160px;
+          text-align: left;
+          padding-left: 30px;
+          font-family: "Montserrat", sans-serif;
+          font-size: clamp(16px, 2.5vw, 20px);
+          color: #fff;
+          font-weight: 600;
+        }
+
+        .price-note {
+          margin-top: 36px;
+          font-family: "Montserrat", sans-serif;
+          font-size: clamp(14px, 2vw, 17px);
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.75);
+          line-height: 1.6;
+        }
+
         @media screen and (max-width: 767px) {
           .features-section,
           .testimonials-section,
@@ -1013,6 +1119,38 @@ const PhotographyBanner: React.FC = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+
+          <section className="price-section" id="prices">
+            <div className="price-container">
+              <p className="price-top-title">Алмазная мозаика по фото</p>
+              <div className="price-divider"></div>
+              <h2 className="price-main-title">Прайс-лист</h2>
+              <div className="price-divider-bottom"></div>
+              <div>
+                {[
+                  ["30×40", "1 990 руб."],
+                  ["40×40", "2 390 руб."],
+                  ["40×60", "2 990 руб."],
+                  ["50×50", "2 990 руб."],
+                  ["50×70", "3 490 руб."],
+                  ["50×40", "2 790 руб."],
+                  ["60×60", "3 490 руб."],
+                  ["60×80", "4 390 руб."],
+                  ["70×70", "4 390 руб."],
+                  ["80×80", "5 390 руб."],
+                  ["80×120", "7 690 руб."],
+                  ["100×100", "7 300 руб."],
+                ].map(([size, price]) => (
+                  <div className="price-row" key={size}>
+                    <span className="size-col">{size}</span>
+                    <div className="gold-bar"></div>
+                    <span className="price-col">{price}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="price-note">Есть ещё размеры —<br />уточняйте в личные сообщения</p>
             </div>
           </section>
 
