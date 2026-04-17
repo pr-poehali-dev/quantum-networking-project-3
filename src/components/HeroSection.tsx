@@ -134,14 +134,14 @@ const HeroSection: React.FC = () => {
 
         .left-part p {
           width: 72%;
-          margin: 20px 0 0;
-          color: #5a3d3d;
-          font-size: 16px;
+          margin: 40px 0 0;
+          color: #7a2840;
+          font-size: clamp(18px, 2.2vw, 26px);
           font-style: normal;
-          font-weight: normal;
-          line-height: 2;
+          font-weight: 700;
+          line-height: 1.6;
           font-family: "Montserrat";
-          opacity: 0.8;
+          opacity: 1;
         }
 
         .book-link {
