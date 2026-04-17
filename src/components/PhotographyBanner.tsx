@@ -96,8 +96,8 @@ const PhotographyBanner: React.FC = () => {
           color: #fff;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
-          font-size: clamp(48px, 12vw, 160px);
-          line-height: 0.75;
+          font-size: clamp(28px, 6vw, 80px);
+          line-height: 0.85;
           font-style: normal;
           text-transform: uppercase;
         }
@@ -105,7 +105,7 @@ const PhotographyBanner: React.FC = () => {
         .left-part h1 .text {
           color: #d33682;
           display: block;
-          height: clamp(100px, 15vw, 120px);
+          height: clamp(60px, 8vw, 90px);
         }
 
         .left-part h1 .d-flex {
