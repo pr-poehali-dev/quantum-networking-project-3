@@ -72,7 +72,7 @@ export default function Footer() {
     <>
       <style>{`
         .ai-footer {
-          background-color: #073642;
+          background-color: #e8d5da;
           position: relative;
           overflow: hidden;
         }
@@ -81,7 +81,7 @@ export default function Footer() {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.3;
-          background: #d33682;
+          background: #e8a4b0;
           filter: blur(140px);
           height: 60%;
           width: 50%;
@@ -95,7 +95,7 @@ export default function Footer() {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.2;
-          background: #cb4b16;
+          background: #d4a0b0;
           filter: blur(120px);
           height: 40%;
           width: 40%;
@@ -135,7 +135,7 @@ export default function Footer() {
         .brand-icon {
           width: 50px;
           height: 50px;
-          background: #d33682;
+          background: #b5657a;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -143,14 +143,14 @@ export default function Footer() {
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: 20px;
-          color: #002b36;
+          color: #fff;
         }
 
         .brand-name {
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: 28px;
-          color: #ffffff;
+          color: #3d2b2b;
           text-transform: uppercase;
         }
 
@@ -158,7 +158,7 @@ export default function Footer() {
           font-family: "Montserrat";
           font-size: 16px;
           line-height: 1.8;
-          color: #aaa;
+          color: #7a5a5a;
           margin-bottom: 40px;
           max-width: 400px;
         }
@@ -198,7 +198,7 @@ export default function Footer() {
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: 16px;
-          color: #d33682;
+          color: #b5657a;
           text-transform: uppercase;
           margin: 0 0 25px;
           letter-spacing: 1px;
@@ -217,7 +217,7 @@ export default function Footer() {
         .link-item a {
           font-family: "Montserrat";
           font-size: 14px;
-          color: #aaa;
+          color: #7a5a5a;
           text-decoration: none;
           transition: color 0.3s ease;
           display: flex;
@@ -226,7 +226,7 @@ export default function Footer() {
         }
 
         .link-item a:hover {
-          color: #ffffff;
+          color: #b5657a;
         }
 
         .contact-item {
@@ -238,7 +238,7 @@ export default function Footer() {
         .contact-icon {
           width: 20px;
           height: 20px;
-          color: #d33682;
+          color: #b5657a;
           flex-shrink: 0;
         }
 
@@ -260,7 +260,7 @@ export default function Footer() {
           position: absolute;
           width: 100%;
           height: 100%;
-          background: #d33682;
+          background: #b5657a;
           border-radius: 50%;
           animation: pulse 2s infinite;
         }
@@ -270,27 +270,27 @@ export default function Footer() {
           position: absolute;
           width: 100%;
           height: 100%;
-          background: #d33682;
+          background: #b5657a;
           border-radius: 50%;
         }
 
         @keyframes pulse {
           0% {
             transform: scale(0.95);
-            box-shadow: 0 0 0 0 rgba(211, 54, 130, 0.7);
+            box-shadow: 0 0 0 0 rgba(181, 101, 122, 0.7);
           }
           70% {
             transform: scale(1);
-            box-shadow: 0 0 0 10px rgba(211, 54, 130, 0);
+            box-shadow: 0 0 0 10px rgba(181, 101, 122, 0);
           }
           100% {
             transform: scale(0.95);
-            box-shadow: 0 0 0 0 rgba(211, 54, 130, 0);
+            box-shadow: 0 0 0 0 rgba(181, 101, 122, 0);
           }
         }
 
         .footer-bottom {
-          border-top: 1px solid #333;
+          border-top: 1px solid rgba(181, 101, 122, 0.25);
           padding-top: 30px;
           display: flex;
           justify-content: space-between;
@@ -302,17 +302,17 @@ export default function Footer() {
         .copyright {
           font-family: "Montserrat";
           font-size: 14px;
-          color: #aaa;
+          color: #9a7a7a;
         }
 
         .copyright a {
-          color: #d33682;
+          color: #b5657a;
           text-decoration: none;
           transition: color 0.3s ease;
         }
 
         .copyright a:hover {
-          color: #ffffff;
+          color: #3d2b2b;
         }
 
         .footer-legal {
@@ -323,13 +323,13 @@ export default function Footer() {
         .footer-legal a {
           font-family: "Montserrat";
           font-size: 14px;
-          color: #aaa;
+          color: #9a7a7a;
           text-decoration: none;
           transition: color 0.3s ease;
         }
 
         .footer-legal a:hover {
-          color: #ffffff;
+          color: #b5657a;
         }
 
         @media screen and (max-width: 1199px) {

@@ -44,7 +44,7 @@ const PhotographyBanner: React.FC = () => {
 
         .photography-banner {
           margin: 0;
-          background-color: #002b36;
+          background-color: #f5ede8;
           background-image: url("https://www.yudiz.com/codepen/photography-banner/frame.png");
           background-size: cover;
           background-repeat: no-repeat;
@@ -74,8 +74,8 @@ const PhotographyBanner: React.FC = () => {
         .info-section::before {
           content: "";
           border-radius: 197.5px 0px;
-          opacity: 0.4;
-          background: #d33682;
+          opacity: 0.35;
+          background: #e8a4b0;
           filter: blur(162px);
           height: 35%;
           width: 55%;
@@ -93,7 +93,7 @@ const PhotographyBanner: React.FC = () => {
 
         .left-part h1 {
           margin: 0;
-          color: #fff;
+          color: #3d2b2b;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: clamp(28px, 6vw, 80px);
@@ -103,7 +103,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .left-part h1 .text {
-          color: #d33682;
+          color: #b5657a;
           display: block;
           height: clamp(60px, 8vw, 90px);
         }
@@ -135,7 +135,7 @@ const PhotographyBanner: React.FC = () => {
         .left-part p {
           width: 72%;
           margin: 20px 0 0;
-          color: #fff;
+          color: #5a3d3d;
           font-size: 16px;
           font-style: normal;
           font-weight: normal;
@@ -150,7 +150,7 @@ const PhotographyBanner: React.FC = () => {
           border: 0;
           font-size: 72px;
           line-height: 1;
-          color: #f1f1f1;
+          color: #3d2b2b;
           letter-spacing: 0.25px;
           text-transform: uppercase;
           font-family: "Montserrat";
@@ -177,7 +177,7 @@ const PhotographyBanner: React.FC = () => {
           bottom: 6px;
           width: 100%;
           height: 3px;
-          background-color: #ffffff;
+          background-color: #b5657a;
           transform: scaleX(1);
           transition: transform 250ms ease-in-out;
           transform-origin: 0 0;
@@ -201,7 +201,7 @@ const PhotographyBanner: React.FC = () => {
         .book-link .arrow::after {
           position: absolute;
           content: "";
-          background-color: #d33682;
+          background-color: #b5657a;
           transition: all ease-in-out 0.35s;
           transform-origin: 0 0;
           border-radius: 30px;
@@ -230,7 +230,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .book-link .arrow span {
-          background-color: #d33682;
+          background-color: #b5657a;
           height: 2px;
           width: 100%;
           display: inline-block;
@@ -245,7 +245,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .book-link .arrow span::before {
-          background-color: #d33682;
+          background-color: #b5657a;
           content: "";
           height: 100%;
           width: 15px;
@@ -269,8 +269,8 @@ const PhotographyBanner: React.FC = () => {
         .right-part::before {
           content: "";
           border-radius: 197.5px 0px;
-          opacity: 0.4;
-          background: #d33682;
+          opacity: 0.35;
+          background: #e8a4b0;
           filter: blur(112px);
           height: 35%;
           width: 55%;
@@ -293,18 +293,18 @@ const PhotographyBanner: React.FC = () => {
 
         .particle {
           position: absolute;
-          background: rgba(211, 54, 130, 0.6);
+          background: rgba(181, 101, 122, 0.4);
           border-radius: 50%;
           pointer-events: none;
           animation: float linear infinite;
         }
 
         .particle:nth-child(odd) {
-          background: rgba(203, 75, 22, 0.4);
+          background: rgba(232, 164, 176, 0.35);
         }
 
         .particle:nth-child(3n) {
-          background: rgba(255, 255, 255, 0.2);
+          background: rgba(196, 120, 138, 0.25);
         }
 
         @keyframes float {
@@ -412,11 +412,11 @@ const PhotographyBanner: React.FC = () => {
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 80%;
+          width: 105%;
           height: auto;
           z-index: 2;
           border-radius: 12px;
-          opacity: 0.9;
+          opacity: 1;
         }
 
         @media screen and (min-width: 1500px) {
@@ -492,7 +492,7 @@ const PhotographyBanner: React.FC = () => {
 
         .features-section {
           padding: 100px 30px;
-          background-color: #073642;
+          background-color: #f0e4e8;
           position: relative;
           overflow: hidden;
         }
@@ -501,7 +501,7 @@ const PhotographyBanner: React.FC = () => {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.3;
-          background: #d33682;
+          background: #e8a4b0;
           filter: blur(140px);
           height: 40%;
           width: 40%;
@@ -521,7 +521,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .features-content h2 {
-          color: #fff;
+          color: #3d2b2b;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: clamp(60px, 8vw, 120px);
@@ -531,7 +531,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .features-content h2 .highlight {
-          color: #d33682;
+          color: #b5657a;
         }
 
         .features-list {
@@ -551,19 +551,19 @@ const PhotographyBanner: React.FC = () => {
         .feature-icon {
           width: 50px;
           height: 50px;
-          background: #d33682;
+          background: #b5657a;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
           font-size: 20px;
           font-weight: bold;
-          color: #002b36;
+          color: #fff;
           flex-shrink: 0;
         }
 
         .feature-text h3 {
-          color: #fff;
+          color: #3d2b2b;
           font-family: "Montserrat";
           font-size: 18px;
           margin: 0 0 8px;
@@ -571,7 +571,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .feature-text p {
-          color: #aaa;
+          color: #7a5a5a;
           font-family: "Inter", sans-serif;
           font-size: 14px;
           margin: 0;
@@ -580,7 +580,7 @@ const PhotographyBanner: React.FC = () => {
 
         .testimonials-section {
           padding: 100px 30px;
-          background-color: #002b36;
+          background-color: #f5ede8;
           position: relative;
           overflow: hidden;
         }
@@ -588,8 +588,8 @@ const PhotographyBanner: React.FC = () => {
         .testimonials-section::before {
           content: "";
           border-radius: 197.5px 0px;
-          opacity: 0.4;
-          background: #d33682;
+          opacity: 0.3;
+          background: #e8a4b0;
           filter: blur(120px);
           height: 50%;
           width: 30%;
@@ -607,7 +607,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .testimonials-title {
-          color: #fff;
+          color: #3d2b2b;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: clamp(60px, 8vw, 100px);
@@ -637,8 +637,8 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .testimonial-card {
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid #333;
+          background: rgba(255, 255, 255, 0.7);
+          border: 1px solid rgba(181, 101, 122, 0.2);
           border-radius: 20px;
           padding: 40px 30px;
           position: relative;
@@ -648,7 +648,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .testimonial-quote {
-          color: #fff;
+          color: #5a3d3d;
           font-family: "Inter", sans-serif;
           font-weight: 400;
           font-size: 16px;
@@ -668,16 +668,16 @@ const PhotographyBanner: React.FC = () => {
           width: 50px;
           height: 50px;
           border-radius: 50%;
-          background: #d33682;
+          background: #b5657a;
           display: flex;
           align-items: center;
           justify-content: center;
           font-weight: bold;
-          color: #002b36;
+          color: #fff;
         }
 
         .author-info h4 {
-          color: #cb4b16;
+          color: #b5657a;
           font-family: "Inter", sans-serif;
           font-size: 14px;
           margin: 0;
@@ -685,7 +685,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .author-info p {
-          color: #aaa;
+          color: #9a7a7a;
           font-family: "Inter", sans-serif;
           font-size: 12px;
           margin: 5px 0 0;
@@ -693,7 +693,7 @@ const PhotographyBanner: React.FC = () => {
 
         .cta-section {
           padding: 120px 30px;
-          background-color: #073642;
+          background-color: #edd8de;
           position: relative;
           overflow: hidden;
         }
@@ -701,8 +701,8 @@ const PhotographyBanner: React.FC = () => {
         .cta-section::before {
           content: "";
           border-radius: 197.5px 0px;
-          opacity: 0.6;
-          background: #d33682;
+          opacity: 0.4;
+          background: #e8a4b0;
           filter: blur(180px);
           height: 60%;
           width: 80%;
@@ -719,7 +719,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .cta-title {
-          color: #fff;
+          color: #3d2b2b;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: clamp(80px, 12vw, 160px);
@@ -729,7 +729,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .cta-subtitle {
-          color: #d33682;
+          color: #b5657a;
           font-family: "Montserrat";
           font-size: 26px;
           line-height: 1.6;
@@ -748,8 +748,8 @@ const PhotographyBanner: React.FC = () => {
 
         .cta-button {
           padding: 18px 40px;
-          background: #d33682;
-          color: #002b36;
+          background: #b5657a;
+          color: #fff;
           text-decoration: none;
           font-family: "Montserrat";
           font-size: 16px;
@@ -757,24 +757,24 @@ const PhotographyBanner: React.FC = () => {
           text-transform: uppercase;
           border-radius: 50px;
           transition: all 0.3s ease;
-          border: 2px solid #d33682;
+          border: 2px solid #b5657a;
         }
 
         .cta-button:hover {
           background: transparent;
-          color: #d33682;
+          color: #b5657a;
         }
 
         .cta-button.secondary {
           background: transparent;
-          color: #fff;
-          border: 2px solid #fff;
+          color: #3d2b2b;
+          border: 2px solid #3d2b2b;
         }
 
         .cta-button.secondary:hover {
           background: transparent;
-          color: #d33682;
-          border: 2px solid #d33682;
+          color: #b5657a;
+          border: 2px solid #b5657a;
         }
 
         @media screen and (max-width: 1199px) {
@@ -798,13 +798,14 @@ const PhotographyBanner: React.FC = () => {
           padding: 80px 20px;
           position: relative;
           z-index: 1;
+          background-color: #f0e4e8;
         }
 
         .price-container {
           max-width: 680px;
           margin: 0 auto;
-          background: rgba(255,255,255,0.04);
-          border: 1px solid rgba(201, 168, 76, 0.3);
+          background: rgba(255,255,255,0.6);
+          border: 1px solid rgba(181, 101, 122, 0.2);
           border-radius: 24px;
           padding: 50px 50px;
           backdrop-filter: blur(10px);
@@ -817,7 +818,7 @@ const PhotographyBanner: React.FC = () => {
           font-weight: 700;
           letter-spacing: 0.3em;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.6);
+          color: #9a7a7a;
           margin: 0 0 12px;
         }
 
@@ -832,7 +833,7 @@ const PhotographyBanner: React.FC = () => {
           font-family: "Montserrat", sans-serif;
           font-size: clamp(32px, 6vw, 54px);
           font-weight: 700;
-          color: #fff;
+          color: #3d2b2b;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           margin: 0 0 24px;
@@ -855,7 +856,7 @@ const PhotographyBanner: React.FC = () => {
           align-items: center;
           justify-content: center;
           padding: 10px 0;
-          border-bottom: 1px solid rgba(255,255,255,0.06);
+          border-bottom: 1px solid rgba(181, 101, 122, 0.12);
         }
 
         .price-row:last-child {
@@ -868,7 +869,7 @@ const PhotographyBanner: React.FC = () => {
           padding-right: 30px;
           font-family: "Montserrat", sans-serif;
           font-size: clamp(16px, 2.5vw, 20px);
-          color: rgba(255,255,255,0.85);
+          color: #5a3d3d;
           font-weight: 400;
         }
 
@@ -885,7 +886,7 @@ const PhotographyBanner: React.FC = () => {
           padding-left: 30px;
           font-family: "Montserrat", sans-serif;
           font-size: clamp(16px, 2.5vw, 20px);
-          color: #fff;
+          color: #3d2b2b;
           font-weight: 600;
         }
 
@@ -896,7 +897,7 @@ const PhotographyBanner: React.FC = () => {
           font-weight: 700;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: rgba(255,255,255,0.75);
+          color: #9a7a7a;
           line-height: 1.6;
         }
 
