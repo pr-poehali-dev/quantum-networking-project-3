@@ -148,7 +148,7 @@ const PhotographyBanner: React.FC = () => {
           margin: 40px 0 0;
           padding: 0;
           border: 0;
-          font-size: 56px;
+          font-size: 72px;
           line-height: 1;
           color: #f1f1f1;
           letter-spacing: 0.25px;
@@ -946,7 +946,7 @@ const PhotographyBanner: React.FC = () => {
                 Превратите любимое фото в алмазную мозаику. Бесплатный макет — оплата только после вашего одобрения!
               </p>
               <a href="https://link.ok.ru/AmUO1" target="_blank" rel="noopener noreferrer" className="book-link">
-                <span className="linktext tracking-tighter text-3xl">Заказать макет</span>
+                <span className="linktext tracking-tighter text-5xl">Заказать макет</span>
                 <span className="arrow">
                   <span></span>
                 </span>
