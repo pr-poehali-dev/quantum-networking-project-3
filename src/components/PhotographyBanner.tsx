@@ -6,7 +6,7 @@ const PhotographyBanner: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
 
-  const texts = ["МОЗАИКУ.", "ШЕДЕВР."]
+  const texts = ["МОЗАИКУ ПО ЛЮБОМУ ФОТО.", "ШЕДЕВР ИЗ ВАШЕГО ФОТО."]
 
   useEffect(() => {
     const typeSpeed = isDeleting ? 40 : 100
