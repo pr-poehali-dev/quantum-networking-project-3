@@ -884,7 +884,7 @@ const PhotographyBanner: React.FC = () => {
               </div>
               <img
                 className="hero-image"
-                src="https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/files/463196bf-c932-42f6-8434-7ac6a2e26cc1.jpg"
+                src="https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/bucket/fcde98d6-da98-4322-b430-4ba44d88c34b.png"
                 alt="Алмазная мозаика"
               />
             </div>
