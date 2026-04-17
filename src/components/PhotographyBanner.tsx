@@ -1023,8 +1023,8 @@ const PhotographyBanner: React.FC = () => {
                 Присылайте фото в WhatsApp/Telegram +7-952-067-20-14 или пишите в личные сообщения. Макет бесплатно!
               </p>
               <div className="cta-buttons">
-                <a href="https://wa.me/79520672014" className="cta-button">
-                  Написать в WhatsApp
+                <a href="https://ok.ru/group/56567832182852/messages" target="_blank" rel="noopener noreferrer" className="cta-button">
+                  Заказать макет
                 </a>
                 <a href="https://ok.ru/profile/572872647252/statuses/157452607379540" className="cta-button secondary">
                   Наше сообщество
