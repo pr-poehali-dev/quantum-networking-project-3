@@ -449,14 +449,18 @@ export default function Footer() {
               <div className="link-column">
                 <h3>Контакты</h3>
                 <ul className="link-list">
-                  {contactInfo.map(({ icon: Icon, text, isAddress }) => (
-                    <li key={text} className="link-item">
-                      <a href="#" className="contact-item">
-                        <Icon className="contact-icon" size={20} />
-                        {isAddress ? <address style={{ fontStyle: "normal" }}>{text}</address> : <span>{text}</span>}
-                      </a>
-                    </li>
-                  ))}
+                  <li className="link-item">
+                    <a href="https://vk.com/id531116854" target="_blank" rel="noopener noreferrer">Мы ВКонтакте</a>
+                  </li>
+                  <li className="link-item">
+                    <a href="https://ok.ru/oplatatova" target="_blank" rel="noopener noreferrer">Наша группа в Одноклассниках</a>
+                  </li>
+                  <li className="link-item">
+                    <a href="https://max.ru/join/g-_QgLbtsNMRSSC2YYAOJzEQiZfCxnGQjGP65dGrA0c" target="_blank" rel="noopener noreferrer">Группа в МАХ</a>
+                  </li>
+                  <li className="link-item">
+                    <a href="https://ok.ru/group/56567832182852/messages" target="_blank" rel="noopener noreferrer">Написать в Одноклассниках</a>
+                  </li>
                 </ul>
               </div>
             </div>
