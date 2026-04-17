@@ -20,7 +20,7 @@ const data = {
   help: {
     faqs: "#",
     support: "https://ok.ru/group/56567832182852/messages",
-    blog: "https://ok.ru/profile/572872647252/statuses/157452607379540",
+    blog: "https://ok.ru/oplatatova",
   },
   contact: {
     email: "ok.ru/group/56567832182852/messages",
