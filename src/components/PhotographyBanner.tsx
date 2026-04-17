@@ -839,7 +839,7 @@ const PhotographyBanner: React.FC = () => {
               <p className="tracking-widest">
                 Превратите любимое фото в алмазную мозаику. Бесплатный макет — оплата только после вашего одобрения!
               </p>
-              <a href="#cta" className="book-link">
+              <a href="https://link.ok.ru/AmUO1" target="_blank" rel="noopener noreferrer" className="book-link">
                 <span className="linktext tracking-tighter text-3xl">Заказать макет</span>
                 <span className="arrow">
                   <span></span>
