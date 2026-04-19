@@ -299,6 +299,73 @@ const HeroSection: React.FC = () => {
           }
         }
 
+        .free-delivery-banner {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          margin-top: 18px;
+          padding: 14px 22px;
+          background: linear-gradient(135deg, #0055cc 0%, #0077ff 100%);
+          border-radius: 14px;
+          text-decoration: none;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          box-shadow: 0 4px 18px rgba(0,119,255,0.3);
+          max-width: 400px;
+        }
+
+        .free-delivery-banner:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 28px rgba(0,119,255,0.4);
+        }
+
+        .free-delivery-icon {
+          font-size: 28px;
+          flex-shrink: 0;
+        }
+
+        .free-delivery-text {
+          font-family: "Montserrat", sans-serif;
+          font-size: 18px;
+          font-weight: 900;
+          color: #fff;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          line-height: 1.2;
+          flex: 1;
+        }
+
+        .free-delivery-sub {
+          font-size: 12px;
+          font-weight: 500;
+          text-transform: none;
+          opacity: 0.85;
+          letter-spacing: 0.02em;
+        }
+
+        .free-delivery-arrow {
+          font-size: 22px;
+          color: #fff;
+          opacity: 0.8;
+          flex-shrink: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+          .free-delivery-banner {
+            padding: 12px 16px;
+            gap: 10px;
+            border-radius: 12px;
+          }
+          .free-delivery-icon {
+            font-size: 22px;
+          }
+          .free-delivery-text {
+            font-size: 15px;
+          }
+          .free-delivery-sub {
+            font-size: 11px;
+          }
+        }
+
         .visit-counter {
           display: inline-flex;
           align-items: center;
@@ -669,6 +736,11 @@ const HeroSection: React.FC = () => {
               <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" fill="#0077ff" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="16">MAX</text>
             </svg>
             Заказать макет в МАХ прямо сейчас
+          </a>
+          <a href="https://max.ru/join/g-_QgLbtsNMRSSC2YYAOJzEQiZfCxnGQjGP65dGrA0c" target="_blank" rel="noopener noreferrer" className="free-delivery-banner">
+            <span className="free-delivery-icon">🚚</span>
+            <span className="free-delivery-text">БЕСПЛАТНАЯ ДОСТАВКА<br/><span className="free-delivery-sub">подписчикам группы МАХ</span></span>
+            <span className="free-delivery-arrow">→</span>
           </a>
           {visitCount !== null && (
             <div className="visit-counter">
