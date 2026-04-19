@@ -162,20 +162,37 @@ const TestimonialsSection: React.FC = () => {
 
         @media screen and (max-width: 767px) {
           .testimonials-section {
-            padding: 50px 16px;
+            padding: 44px 0;
           }
           .testimonials-title {
-            font-size: clamp(28px, 9vw, 48px);
+            font-size: clamp(24px, 8vw, 40px);
+            margin: 0 0 40px;
+            padding: 0 20px;
           }
           .testimonials-marquee {
-            gap: 16px;
+            gap: 14px;
           }
           .testimonial-card {
-            padding: 24px 16px;
-            min-width: 260px;
+            padding: 22px 18px;
+            min-width: 270px;
+            max-width: 290px;
+            border-radius: 16px;
           }
           .testimonial-quote {
             font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+          }
+          .author-avatar {
+            width: 42px;
+            height: 42px;
+            font-size: 13px;
+          }
+          .author-info h4 {
+            font-size: 13px;
+          }
+          .author-info p {
+            font-size: 12px;
           }
         }
       `}</style>

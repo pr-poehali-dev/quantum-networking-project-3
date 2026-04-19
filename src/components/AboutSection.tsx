@@ -163,39 +163,54 @@ const AboutSection: React.FC = () => {
 
         @media screen and (max-width: 767px) {
           .about-section {
-            padding: 50px 16px;
+            padding: 44px 20px;
+          }
+          .about-label {
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
           }
           .about-title {
-            font-size: clamp(24px, 7vw, 38px);
-            margin-bottom: 32px;
+            font-size: clamp(22px, 6.5vw, 34px);
+            line-height: 1.15;
+            margin-bottom: 24px;
           }
           .about-text {
-            font-size: 14px;
-            line-height: 1.7;
+            font-size: 15px;
+            line-height: 1.75;
+          }
+          .about-grid {
+            gap: 16px;
+            margin-bottom: 28px;
           }
           .about-stats {
             grid-template-columns: 1fr 1fr;
-            gap: 14px;
+            gap: 12px;
           }
           .stat-card {
-            padding: 24px 16px;
+            padding: 20px 14px;
+            border-radius: 16px;
           }
           .stat-number {
-            font-size: clamp(26px, 7vw, 38px);
+            font-size: clamp(24px, 6vw, 36px);
+            margin-bottom: 6px;
           }
           .stat-label {
-            font-size: 12px;
+            font-size: 13px;
+            line-height: 1.35;
           }
           .about-badge {
-            padding: 10px 16px;
-            margin-top: 32px;
+            padding: 10px 14px;
+            margin-top: 24px;
+            gap: 8px;
           }
           .about-badge-text {
-            font-size: 12px;
+            font-size: 13px;
+            line-height: 1.4;
           }
         }
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 420px) {
           .about-stats {
             grid-template-columns: 1fr;
           }

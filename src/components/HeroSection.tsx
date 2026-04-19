@@ -584,48 +584,59 @@ const HeroSection: React.FC = () => {
           }
 
           .left-part {
-            padding: 32px 16px 40px;
+            padding: 28px 20px 36px;
             overflow: visible;
           }
 
           .left-part h1 {
-            font-size: clamp(26px, 7vw, 44px);
+            font-size: clamp(28px, 8vw, 42px);
+            line-height: 1;
           }
 
           .left-part h1 .text {
-            height: clamp(56px, 14vw, 80px);
-            font-size: clamp(22px, 6vw, 38px);
+            height: clamp(52px, 12vw, 72px);
+            font-size: clamp(20px, 5.5vw, 34px);
+            line-height: 1.2;
           }
 
           .left-part p {
-            font-size: 13px;
+            font-size: 15px;
+            line-height: 1.65;
             width: 100%;
-            margin-top: 20px;
+            margin-top: 18px;
+            font-weight: 600;
           }
 
           .book-link {
-            font-size: 22px;
-            gap: 12px;
-            margin-top: 20px;
+            font-size: 18px;
+            gap: 10px;
+            margin-top: 22px;
           }
 
           .book-link .linktext {
-            font-size: 20px !important;
+            font-size: 17px !important;
           }
 
           .book-link .arrow {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
+          }
+
+          .max-link {
+            font-size: 14px !important;
+            padding: 13px 20px !important;
+            letter-spacing: 0.02em;
+            line-height: 1.3;
           }
 
           .right-part {
-            height: 300px;
-            width: 300px;
+            height: 280px;
+            width: 280px;
             margin: 0 auto;
           }
 
           .bg-dash-circle {
-            width: 80px;
+            width: 70px;
           }
         }
       `}</style>

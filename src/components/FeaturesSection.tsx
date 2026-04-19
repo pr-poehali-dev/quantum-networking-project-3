@@ -103,31 +103,34 @@ const FeaturesSection: React.FC = () => {
 
         @media screen and (max-width: 767px) {
           .features-section {
-            padding: 50px 16px;
+            padding: 44px 20px;
           }
           .features-container {
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: 20px;
           }
           .features-content h2 {
-            font-size: clamp(28px, 8vw, 40px);
-            margin: 0 0 12px;
+            font-size: clamp(24px, 7vw, 36px);
+            line-height: 1.1;
+            margin: 0 0 10px;
           }
           .feature-item {
-            padding: 18px 0;
+            padding: 16px 0;
             gap: 14px;
           }
           .feature-icon {
             width: 40px;
             height: 40px;
-            font-size: 15px;
+            font-size: 14px;
             flex-shrink: 0;
           }
           .feature-text h3 {
             font-size: 15px;
+            line-height: 1.3;
           }
           .feature-text p {
-            font-size: 13px;
+            font-size: 14px;
+            line-height: 1.6;
           }
         }
       `}</style>

@@ -207,16 +207,45 @@ const PriceCtaSection: React.FC = () => {
         }
 
         @media screen and (max-width: 767px) {
+          .price-section {
+            padding: 44px 16px;
+          }
+          .price-container {
+            padding: 24px 16px;
+            border-radius: 16px;
+          }
+          .price-top-title {
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            margin-bottom: 8px;
+          }
+          .price-main-title {
+            font-size: clamp(22px, 6vw, 32px);
+            letter-spacing: 0.08em;
+          }
+          .price-row {
+            padding: 9px 0;
+          }
+          .size-col,
+          .price-col {
+            width: auto;
+            flex: 1;
+            font-size: 15px;
+            padding-left: 12px;
+            padding-right: 12px;
+          }
           .cta-section {
-            padding: 50px 16px;
+            padding: 44px 20px;
           }
           .cta-title {
-            font-size: clamp(36px, 11vw, 60px);
-            margin: 0 0 16px;
+            font-size: clamp(28px, 9vw, 48px);
+            line-height: 1;
+            margin: 0 0 14px;
           }
           .cta-subtitle {
-            font-size: 14px;
-            margin-bottom: 32px;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 28px;
           }
           .cta-buttons {
             flex-direction: column;
@@ -225,22 +254,10 @@ const PriceCtaSection: React.FC = () => {
           }
           .cta-button {
             width: 100%;
-            max-width: 300px;
-            padding: 14px 24px;
+            max-width: 320px;
+            padding: 14px 20px;
             font-size: 14px;
-          }
-          .price-container {
-            padding: 28px 16px;
-          }
-          .price-main-title {
-            font-size: clamp(24px, 7vw, 36px);
-          }
-          .size-col,
-          .price-col {
-            width: 120px;
-            font-size: 15px;
-            padding-left: 16px;
-            padding-right: 16px;
+            letter-spacing: 0.04em;
           }
         }
       `}</style>
