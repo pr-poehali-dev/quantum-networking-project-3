@@ -38,9 +38,9 @@ const FeaturesSection: React.FC = () => {
           color: #3d2b2b;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
-          font-size: clamp(60px, 8vw, 120px);
-          line-height: 0.9;
-          margin: 0 0 30px;
+          font-size: clamp(32px, 4.5vw, 64px);
+          line-height: 1.05;
+          margin: 0 0 20px;
           text-transform: uppercase;
         }
 
@@ -103,11 +103,31 @@ const FeaturesSection: React.FC = () => {
 
         @media screen and (max-width: 767px) {
           .features-section {
-            padding: 60px 16px;
+            padding: 50px 16px;
           }
           .features-container {
             grid-template-columns: 1fr;
-            gap: 30px;
+            gap: 24px;
+          }
+          .features-content h2 {
+            font-size: clamp(28px, 8vw, 40px);
+            margin: 0 0 12px;
+          }
+          .feature-item {
+            padding: 18px 0;
+            gap: 14px;
+          }
+          .feature-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 15px;
+            flex-shrink: 0;
+          }
+          .feature-text h3 {
+            font-size: 15px;
+          }
+          .feature-text p {
+            font-size: 13px;
           }
         }
       `}</style>
