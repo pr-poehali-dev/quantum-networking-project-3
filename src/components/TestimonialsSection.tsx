@@ -1,6 +1,40 @@
 import type React from "react"
 
+const reviews = [
+  {
+    initials: "ЕМ",
+    name: "Елена Михайлова",
+    role: "Мама двоих детей",
+    text: "Заказала мозаику с фото дочки — просто восторг! Макет прислали на следующий день, всё согласовали быстро.",
+  },
+  {
+    initials: "НС",
+    name: "Наталья Соколова",
+    role: "Постоянный клиент",
+    text: "Подарила мужу мозаику с нашим свадебным фото. Он был в слезах от счастья. Качество превосходное!",
+  },
+  {
+    initials: "ОП",
+    name: "Ольга Петрова",
+    role: "Мастерица рукоделия",
+    text: "Уже третий заказ! Увлекательное хобби и отличный подарок. Рекомендую всем!",
+  },
+  {
+    initials: "СК",
+    name: "Светлана Кравцова (Завалишина)",
+    role: "Клиент",
+    text: "Стразики ровные, хорошего качества, блестящие (очень много осталось). Холст плотный, ровный, клеевая основа качественная — стразики не отлетают. Очень переживала, но результат превзошёл все ожидания. Буду ещё заказывать!!!",
+  },
+  {
+    initials: "ИК",
+    name: "Ирина Корохтенко (Лозовая)",
+    role: "Клиент",
+    text: "Огромное спасибо. Картинка 70/50, очень переживала, но оказалось напрасно. Всё очень хорошо, всё красочно, страз очень много осталось. Заказывала невесточке, жду день рождения. Скоро закажу доченьке. Спасибо!!!",
+  },
+]
+
 const TestimonialsSection: React.FC = () => {
+  const doubled = [...reviews, ...reviews]
   return (
     <>
       <style>{`
@@ -150,78 +184,18 @@ const TestimonialsSection: React.FC = () => {
         <div className="testimonials-container">
           <h2 className="testimonials-title">Отзывы клиентов</h2>
           <div className="testimonials-marquee">
-            <div className="testimonial-card">
-              <p className="testimonial-quote">
-                "Заказала мозаику с фото дочки — просто восторг! Макет прислали на следующий день, всё согласовали быстро."
-              </p>
-              <div className="testimonial-author">
-                <div className="author-avatar">ЕМ</div>
-                <div className="author-info">
-                  <h4>Елена Михайлова</h4>
-                  <p>Мама двоих детей</p>
+            {doubled.map((r, i) => (
+              <div className="testimonial-card" key={i}>
+                <p className="testimonial-quote">"{r.text}"</p>
+                <div className="testimonial-author">
+                  <div className="author-avatar">{r.initials}</div>
+                  <div className="author-info">
+                    <h4>{r.name}</h4>
+                    <p>{r.role}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="testimonial-card">
-              <p className="testimonial-quote">
-                "Подарила мужу мозаику с нашим свадебным фото. Он был в слезах от счастья. Качество превосходное!"
-              </p>
-              <div className="testimonial-author">
-                <div className="author-avatar">НС</div>
-                <div className="author-info">
-                  <h4>Наталья Соколова</h4>
-                  <p>Постоянный клиент</p>
-                </div>
-              </div>
-            </div>
-            <div className="testimonial-card">
-              <p className="testimonial-quote">
-                "Уже третий заказ! Увлекательное хобби и отличный подарок. Рекомендую всем!"
-              </p>
-              <div className="testimonial-author">
-                <div className="author-avatar">ОП</div>
-                <div className="author-info">
-                  <h4>Ольга Петрова</h4>
-                  <p>Мастерица рукоделия</p>
-                </div>
-              </div>
-            </div>
-            <div className="testimonial-card">
-              <p className="testimonial-quote">
-                "Заказала мозаику с фото дочки — просто восторг! Макет прислали на следующий день, всё согласовали быстро."
-              </p>
-              <div className="testimonial-author">
-                <div className="author-avatar">ЕМ</div>
-                <div className="author-info">
-                  <h4>Елена Михайлова</h4>
-                  <p>Мама двоих детей</p>
-                </div>
-              </div>
-            </div>
-            <div className="testimonial-card">
-              <p className="testimonial-quote">
-                "Подарила мужу мозаику с нашим свадебным фото. Он был в слезах от счастья. Качество превосходное!"
-              </p>
-              <div className="testimonial-author">
-                <div className="author-avatar">НС</div>
-                <div className="author-info">
-                  <h4>Наталья Соколова</h4>
-                  <p>Постоянный клиент</p>
-                </div>
-              </div>
-            </div>
-            <div className="testimonial-card">
-              <p className="testimonial-quote">
-                "Уже третий заказ! Увлекательное хобби и отличный подарок. Рекомендую всем!"
-              </p>
-              <div className="testimonial-author">
-                <div className="author-avatar">ОП</div>
-                <div className="author-info">
-                  <h4>Ольга Петрова</h4>
-                  <p>Мастерица рукоделия</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
