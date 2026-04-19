@@ -21,6 +21,18 @@ const photos = [
     url: "https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/bucket/9e056594-7f1a-48ff-abe8-8533993e5f52.jpg",
     label: "Мужской портрет на кирпичной стене",
   },
+  {
+    url: "https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/bucket/859aa9c2-a356-40e7-a97d-75dca64119e1.jpg",
+    label: "Портрет девочки",
+  },
+  {
+    url: "https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/bucket/4e9034ed-779c-4d5d-8285-95a7fe6ba6d3.jpg",
+    label: "Портрет военного в рамке",
+  },
+  {
+    url: "https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/bucket/fbc2617f-3e1c-4d37-a044-27bc36ee9dc3.jpg",
+    label: "Портрет пары в рамке",
+  },
 ]
 
 const GallerySection: React.FC = () => {
