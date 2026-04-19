@@ -257,7 +257,7 @@ const PriceCtaSection: React.FC = () => {
               </div>
             ))}
           </div>
-          <p className="price-note">Есть ещё размеры —<br />уточняйте в личные сообщения</p>
+
         </div>
       </section>
 
