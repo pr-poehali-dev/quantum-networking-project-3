@@ -142,8 +142,8 @@ const PriceCtaSection: React.FC = () => {
           color: #3d2b2b;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
-          font-size: clamp(80px, 12vw, 160px);
-          line-height: 0.8;
+          font-size: clamp(40px, 10vw, 160px);
+          line-height: 0.9;
           margin: 0 0 30px;
           text-transform: uppercase;
         }
@@ -151,7 +151,7 @@ const PriceCtaSection: React.FC = () => {
         .cta-subtitle {
           color: #b5657a;
           font-family: "Montserrat";
-          font-size: 26px;
+          font-size: clamp(15px, 2.5vw, 26px);
           line-height: 1.6;
           margin: 0 0 50px;
           max-width: 600px;
@@ -208,23 +208,39 @@ const PriceCtaSection: React.FC = () => {
 
         @media screen and (max-width: 767px) {
           .cta-section {
-            padding: 60px 16px;
+            padding: 50px 16px;
+          }
+          .cta-title {
+            font-size: clamp(36px, 11vw, 60px);
+            margin: 0 0 16px;
+          }
+          .cta-subtitle {
+            font-size: 14px;
+            margin-bottom: 32px;
           }
           .cta-buttons {
             flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
           }
           .cta-button {
             width: 100%;
             max-width: 300px;
+            padding: 14px 24px;
+            font-size: 14px;
           }
           .price-container {
-            padding: 36px 20px;
+            padding: 28px 16px;
+          }
+          .price-main-title {
+            font-size: clamp(24px, 7vw, 36px);
           }
           .size-col,
           .price-col {
-            width: 130px;
+            width: 120px;
+            font-size: 15px;
+            padding-left: 16px;
+            padding-right: 16px;
           }
         }
       `}</style>

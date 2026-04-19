@@ -161,10 +161,41 @@ const AboutSection: React.FC = () => {
           }
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 767px) {
           .about-section {
-            padding: 60px 16px;
+            padding: 50px 16px;
           }
+          .about-title {
+            font-size: clamp(24px, 7vw, 38px);
+            margin-bottom: 32px;
+          }
+          .about-text {
+            font-size: 14px;
+            line-height: 1.7;
+          }
+          .about-stats {
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+          }
+          .stat-card {
+            padding: 24px 16px;
+          }
+          .stat-number {
+            font-size: clamp(26px, 7vw, 38px);
+          }
+          .stat-label {
+            font-size: 12px;
+          }
+          .about-badge {
+            padding: 10px 16px;
+            margin-top: 32px;
+          }
+          .about-badge-text {
+            font-size: 12px;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
           .about-stats {
             grid-template-columns: 1fr;
           }

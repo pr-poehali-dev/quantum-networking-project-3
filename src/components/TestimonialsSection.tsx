@@ -128,13 +128,20 @@ const TestimonialsSection: React.FC = () => {
 
         @media screen and (max-width: 767px) {
           .testimonials-section {
-            padding: 60px 16px;
+            padding: 50px 16px;
+          }
+          .testimonials-title {
+            font-size: clamp(28px, 9vw, 48px);
           }
           .testimonials-marquee {
-            gap: 25px;
+            gap: 16px;
           }
           .testimonial-card {
-            padding: 30px 20px;
+            padding: 24px 16px;
+            min-width: 260px;
+          }
+          .testimonial-quote {
+            font-size: 14px;
           }
         }
       `}</style>
