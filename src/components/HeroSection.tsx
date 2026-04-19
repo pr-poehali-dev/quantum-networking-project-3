@@ -1,10 +1,23 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 
+const VISITS_URL = "https://functions.poehali.dev/e4addbee-a509-4b12-be37-13fd23afd252"
+
 const HeroSection: React.FC = () => {
   const [currentText, setCurrentText] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
+  const [visitCount, setVisitCount] = useState<number | null>(null)
+
+  useEffect(() => {
+    fetch(VISITS_URL, { method: 'POST' })
+      .then(r => r.json())
+      .then(data => {
+        const raw = typeof data === 'string' ? JSON.parse(data) : data
+        setVisitCount(raw.count)
+      })
+      .catch(() => {})
+  }, [])
 
   const texts = ["МОЗАИКУ ПО ЛЮБОМУ ФОТО", "ШЕДЕВР ИЗ ВАШЕГО ФОТО"]
 
@@ -227,6 +240,55 @@ const HeroSection: React.FC = () => {
 
         .book-link:hover .arrow::after {
           height: 65%;
+        }
+
+        .visit-counter {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 24px;
+          background: rgba(255,255,255,0.55);
+          border: 1px solid rgba(181,101,122,0.2);
+          border-radius: 50px;
+          padding: 8px 20px;
+          backdrop-filter: blur(8px);
+        }
+
+        .visit-counter-dot {
+          width: 8px;
+          height: 8px;
+          background: #b5657a;
+          border-radius: 50%;
+          animation: pulse-dot 1.8s ease-in-out infinite;
+          flex-shrink: 0;
+        }
+
+        @keyframes pulse-dot {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.4; transform: scale(0.7); }
+        }
+
+        .visit-counter-text {
+          font-family: "Montserrat", sans-serif;
+          font-size: 13px;
+          font-weight: 600;
+          color: #5a3d3d;
+          letter-spacing: 0.03em;
+        }
+
+        .visit-counter-text span {
+          color: #b5657a;
+          font-weight: 700;
+        }
+
+        @media screen and (max-width: 767px) {
+          .visit-counter {
+            padding: 7px 14px;
+            gap: 8px;
+          }
+          .visit-counter-text {
+            font-size: 12px;
+          }
         }
 
         .book-link .arrow span {
@@ -532,6 +594,14 @@ const HeroSection: React.FC = () => {
               <span></span>
             </span>
           </a>
+          {visitCount !== null && (
+            <div className="visit-counter">
+              <div className="visit-counter-dot" />
+              <p className="visit-counter-text">
+                Нас посетили <span>{visitCount.toLocaleString('ru-RU')}</span> раз
+              </p>
+            </div>
+          )}
         </div>
         <div className="right-part">
           <div className="particles-container">

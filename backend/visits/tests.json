@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "name": "GET visits count",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "POST increment visits",
+      "method": "POST",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}
