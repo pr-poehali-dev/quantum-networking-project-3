@@ -243,14 +243,49 @@ const HeroSection: React.FC = () => {
         }
 
         .book-link-hint {
-          margin: 6px 0 0;
+          display: none;
+        }
+
+        .max-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          margin-top: 20px;
+          padding: 14px 28px;
+          background: #0077ff;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 50px;
           font-family: "Montserrat", sans-serif;
-          font-size: 13px;
-          font-weight: 500;
-          color: #b5657a;
-          letter-spacing: 0.08em;
+          font-size: 16px;
+          font-weight: 700;
           text-transform: uppercase;
-          opacity: 0.85;
+          letter-spacing: 0.05em;
+          border: 2px solid #0077ff;
+          transition: all 0.3s ease;
+        }
+
+        .max-link:hover {
+          background: transparent;
+          color: #0077ff;
+        }
+
+        .max-icon {
+          width: 28px;
+          height: 28px;
+          flex-shrink: 0;
+        }
+
+        @media screen and (max-width: 767px) {
+          .max-link {
+            font-size: 13px;
+            padding: 11px 18px;
+            gap: 8px;
+          }
+          .max-icon {
+            width: 22px;
+            height: 22px;
+          }
         }
 
         .visit-counter {
@@ -605,7 +640,13 @@ const HeroSection: React.FC = () => {
               <span></span>
             </span>
           </a>
-          <p className="book-link-hint">в МАХ прямо сейчас</p>
+          <a href="https://max.ru/c/-70942098022584/AZxIYt-FIsY" target="_blank" rel="noopener noreferrer" className="max-link">
+            <svg className="max-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="10" fill="#fff"/>
+              <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" fill="#0077ff" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="16">MAX</text>
+            </svg>
+            Заказать макет в МАХ прямо сейчас
+          </a>
           {visitCount !== null && (
             <div className="visit-counter">
               <div className="visit-counter-dot" />
