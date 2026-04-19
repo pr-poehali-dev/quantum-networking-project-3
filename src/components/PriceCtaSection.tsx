@@ -287,7 +287,7 @@ const PriceCtaSection: React.FC = () => {
             <a href="https://ok.ru/group/56567832182852/messages" target="_blank" rel="noopener noreferrer" className="cta-button">
               Заказать макет
             </a>
-            <a href="https://ok.ru/oplatatovaх" target="_blank" rel="noopener noreferrer" className="cta-button secondary">
+            <a href="https://ok.ru/oplatatova" target="_blank" rel="noopener noreferrer" className="cta-button secondary">
               Наше сообщество
             </a>
           </div>
