@@ -599,7 +599,7 @@ const HeroSection: React.FC = () => {
           <p className="tracking-widest">
             Превратите любимое фото в алмазную мозаику. Бесплатный макет — оплата только после вашего одобрения!
           </p>
-          <a href="https://link.ok.ru/AmUO1" target="_blank" rel="noopener noreferrer" className="book-link">
+          <a href="https://ok.ru/group/56567832182852/messages" target="_blank" rel="noopener noreferrer" className="book-link">
             <span className="linktext tracking-tighter text-5xl">Заказать макет</span>
             <span className="arrow">
               <span></span>
