@@ -270,6 +270,17 @@ const HeroSection: React.FC = () => {
           color: #0077ff;
         }
 
+        .ok-link {
+          background: #f7931e;
+          border-color: #f7931e;
+          color: #fff;
+        }
+
+        .ok-link:hover {
+          background: transparent;
+          color: #f7931e;
+        }
+
         .max-icon {
           width: 28px;
           height: 28px;
@@ -634,11 +645,12 @@ const HeroSection: React.FC = () => {
           <p className="tracking-widest">
             Превратите любимое фото в алмазную мозаику. Бесплатный макет — оплата только после вашего одобрения!
           </p>
-          <a href="https://ok.ru/group/56567832182852/messages" target="_blank" rel="noopener noreferrer" className="book-link">
-            <span className="linktext tracking-tighter text-5xl">Заказать макет</span>
-            <span className="arrow">
-              <span></span>
-            </span>
+          <a href="https://ok.ru/group/56567832182852/messages" target="_blank" rel="noopener noreferrer" className="max-link ok-link">
+            <svg className="max-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="#f7931e"/>
+              <text x="50%" y="56%" dominantBaseline="middle" textAnchor="middle" fill="#fff" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="15">ОК</text>
+            </svg>
+            Заказать макет в Одноклассниках
           </a>
           <a href="https://link.ok.ru/AmUO1" target="_blank" rel="noopener noreferrer" className="max-link">
             <svg className="max-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
