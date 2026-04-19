@@ -1,7 +1,7 @@
 import { Facebook, Instagram, Twitter, Github, Mail, MapPin, Phone } from "lucide-react"
 
 const data = {
-  facebookLink: "https://ok.ru/profile/572872647252/statuses/157452607379540",
+  facebookLink: "https://ok.ru/profile/572872647252",
   instaLink: "https://ok.ru/group/56567832182852/messages",
   twitterLink: "https://wa.me/79520672014",
   githubLink: "https://wa.me/79520672014",
