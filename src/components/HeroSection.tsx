@@ -242,6 +242,17 @@ const HeroSection: React.FC = () => {
           height: 65%;
         }
 
+        .book-link-hint {
+          margin: 6px 0 0;
+          font-family: "Montserrat", sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+          color: #b5657a;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          opacity: 0.85;
+        }
+
         .visit-counter {
           display: inline-flex;
           align-items: center;
@@ -547,18 +558,18 @@ const HeroSection: React.FC = () => {
           }
 
           .book-link {
-            font-size: 32px;
-            gap: 16px;
-            margin-top: 28px;
+            font-size: 22px;
+            gap: 12px;
+            margin-top: 20px;
           }
 
           .book-link .linktext {
-            font-size: 28px !important;
+            font-size: 20px !important;
           }
 
           .book-link .arrow {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
           }
 
           .right-part {
@@ -594,6 +605,7 @@ const HeroSection: React.FC = () => {
               <span></span>
             </span>
           </a>
+          <p className="book-link-hint">в МАХ прямо сейчас</p>
           {visitCount !== null && (
             <div className="visit-counter">
               <div className="visit-counter-dot" />
