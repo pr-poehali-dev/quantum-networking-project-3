@@ -10,10 +10,5 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: YandexBot
-Allow: /
-
 User-agent: *
 Allow: /
-
-Sitemap: https://quantum-networking-project-3.poehali.app/sitemap.xml
