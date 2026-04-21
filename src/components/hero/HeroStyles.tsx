@@ -327,24 +327,20 @@ const HeroStyles = () => (
 
     .contact-block {
       margin-top: 18px;
-    }
-
-    .contact-link {
       display: inline-flex;
-      align-items: center;
+      flex-direction: column;
       gap: 10px;
-      text-decoration: none;
       background: rgba(255,255,255,0.6);
       border: 1px solid rgba(181,101,122,0.25);
-      border-radius: 50px;
-      padding: 10px 22px;
+      border-radius: 18px;
+      padding: 12px 20px;
       backdrop-filter: blur(8px);
-      transition: background 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .contact-link:hover {
-      background: rgba(255,255,255,0.85);
-      box-shadow: 0 4px 14px rgba(181,101,122,0.2);
+    .contact-number-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .contact-icon {
@@ -360,19 +356,46 @@ const HeroStyles = () => (
       letter-spacing: 0.03em;
     }
 
-    .contact-messengers {
+    .contact-apps {
+      display: flex;
+      gap: 8px;
+    }
+
+    .contact-app-link {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 50px;
       font-family: "Montserrat", sans-serif;
-      font-size: 12px;
-      font-weight: 500;
-      color: #7a2840;
-      opacity: 0.8;
-      white-space: nowrap;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-app-link:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    .contact-app-wa {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .contact-app-tg {
+      background: #229ed9;
+      color: #fff;
+    }
+
+    .contact-app-max {
+      background: #0077ff;
+      color: #fff;
     }
 
     @media screen and (max-width: 767px) {
       .contact-number { font-size: 15px; }
-      .contact-messengers { font-size: 11px; }
-      .contact-link { padding: 9px 16px; gap: 8px; }
+      .contact-app-link { font-size: 12px; padding: 5px 11px; }
+      .contact-block { padding: 10px 16px; }
     }
 
     .visit-counter {

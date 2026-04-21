@@ -107,11 +107,21 @@ const HeroLeftPanel: React.FC = () => {
       </a>
 
       <div className="contact-block">
-        <a href="https://wa.me/79520672014" target="_blank" rel="noopener noreferrer" className="contact-link">
+        <div className="contact-number-row">
           <span className="contact-icon">📱</span>
           <span className="contact-number">+7-952-067-20-14</span>
-          <span className="contact-messengers">WhatsApp / Telegram / МАХ</span>
-        </a>
+        </div>
+        <div className="contact-apps">
+          <a href="https://wa.me/79520672014" target="_blank" rel="noopener noreferrer" className="contact-app-link contact-app-wa">
+            WhatsApp
+          </a>
+          <a href="https://t.me/+79520672014" target="_blank" rel="noopener noreferrer" className="contact-app-link contact-app-tg">
+            Telegram
+          </a>
+          <a href="https://max.ru/im?to=79520672014" target="_blank" rel="noopener noreferrer" className="contact-app-link contact-app-max">
+            МАХ
+          </a>
+        </div>
       </div>
 
       {visitCount !== null && (
