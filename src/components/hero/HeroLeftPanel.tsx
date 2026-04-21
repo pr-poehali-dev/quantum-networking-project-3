@@ -106,6 +106,14 @@ const HeroLeftPanel: React.FC = () => {
         <span className="free-delivery-arrow">→</span>
       </a>
 
+      <div className="contact-block">
+        <a href="https://wa.me/79520672014" target="_blank" rel="noopener noreferrer" className="contact-link">
+          <span className="contact-icon">📱</span>
+          <span className="contact-number">+7-952-067-20-14</span>
+          <span className="contact-messengers">WhatsApp / Telegram / МАХ</span>
+        </a>
+      </div>
+
       {visitCount !== null && (
         <div className="visit-counter">
           <div className="visit-counter-dot" />

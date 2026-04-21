@@ -325,6 +325,56 @@ const HeroStyles = () => (
       .free-delivery-sub { font-size: 11px; }
     }
 
+    .contact-block {
+      margin-top: 18px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      background: rgba(255,255,255,0.6);
+      border: 1px solid rgba(181,101,122,0.25);
+      border-radius: 50px;
+      padding: 10px 22px;
+      backdrop-filter: blur(8px);
+      transition: background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .contact-link:hover {
+      background: rgba(255,255,255,0.85);
+      box-shadow: 0 4px 14px rgba(181,101,122,0.2);
+    }
+
+    .contact-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-number {
+      font-family: "Montserrat", sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #3d2b2b;
+      letter-spacing: 0.03em;
+    }
+
+    .contact-messengers {
+      font-family: "Montserrat", sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #7a2840;
+      opacity: 0.8;
+      white-space: nowrap;
+    }
+
+    @media screen and (max-width: 767px) {
+      .contact-number { font-size: 15px; }
+      .contact-messengers { font-size: 11px; }
+      .contact-link { padding: 9px 16px; gap: 8px; }
+    }
+
     .visit-counter {
       display: inline-flex;
       align-items: center;
