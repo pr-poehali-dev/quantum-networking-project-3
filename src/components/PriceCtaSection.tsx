@@ -1,34 +1,6 @@
 import type React from "react"
-import { useState } from "react"
-
-const CALLBACK_URL = "https://functions.poehali.dev/bd453b74-7d83-4ef1-8335-07a2a33b1885"
 
 const PriceCtaSection: React.FC = () => {
-  const [name, setName] = useState("")
-  const [phone, setPhone] = useState("")
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus("loading")
-    try {
-      const res = await fetch(CALLBACK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone }),
-      })
-      if (res.ok) {
-        setStatus("success")
-        setName("")
-        setPhone("")
-      } else {
-        setStatus("error")
-      }
-    } catch {
-      setStatus("error")
-    }
-  }
-
   return (
     <>
       <style>{`
@@ -378,39 +350,16 @@ const PriceCtaSection: React.FC = () => {
         <div className="cta-container">
           <h2 className="cta-title text-center">Заказать мозаику</h2>
           <p className="cta-subtitle">
-            Оставьте имя и номер телефона — перезвоним, поможем выбрать размер и пришлём бесплатный макет!
+            Присылайте фото в WhatsApp/Telegram/МАХ +7-952-067-20-14 или пишите в личные сообщения. Макет бесплатно!
           </p>
-
-          {status === "success" ? (
-            <div className="cta-success">
-              Спасибо! Мы перезвоним вам в ближайшее время 🌸
-            </div>
-          ) : (
-            <form className="cta-form" onSubmit={handleSubmit}>
-              <input
-                className="cta-input"
-                type="text"
-                placeholder="Ваше имя"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-              <input
-                className="cta-input"
-                type="tel"
-                placeholder="+7-900-000-00-00"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                required
-              />
-              <button className="cta-button" type="submit" disabled={status === "loading"}>
-                {status === "loading" ? "Отправляем..." : "Заказать обратный звонок"}
-              </button>
-              {status === "error" && (
-                <p className="cta-error">Что-то пошло не так. Позвоните нам: +7-952-067-20-14</p>
-              )}
-            </form>
-          )}
+          <div className="cta-buttons">
+            <a href="https://ok.ru/group/56567832182852/messages" target="_blank" rel="noopener noreferrer" className="cta-button">
+              Заказать макет
+            </a>
+            <a href="https://ok.ru/oplatatova" target="_blank" rel="noopener noreferrer" className="cta-button secondary">
+              Наше сообщество
+            </a>
+          </div>
         </div>
       </section>
     </>
