@@ -1,6 +1,34 @@
 import type React from "react"
+import { useState } from "react"
+
+const CALLBACK_URL = "https://functions.poehali.dev/bd453b74-7d83-4ef1-8335-07a2a33b1885"
 
 const PriceCtaSection: React.FC = () => {
+  const [name, setName] = useState("")
+  const [phone, setPhone] = useState("")
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus("loading")
+    try {
+      const res = await fetch(CALLBACK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone }),
+      })
+      if (res.ok) {
+        setStatus("success")
+        setName("")
+        setPhone("")
+      } else {
+        setStatus("error")
+      }
+    } catch {
+      setStatus("error")
+    }
+  }
+
   return (
     <>
       <style>{`
@@ -197,6 +225,58 @@ const PriceCtaSection: React.FC = () => {
           border: 2px solid #b5657a;
         }
 
+        .cta-form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+          max-width: 420px;
+          margin: 0 auto;
+        }
+
+        .cta-input {
+          width: 100%;
+          padding: 16px 24px;
+          border: 2px solid rgba(181,101,122,0.3);
+          border-radius: 50px;
+          font-family: "Montserrat", sans-serif;
+          font-size: 16px;
+          color: #3d2b2b;
+          background: rgba(255,255,255,0.7);
+          outline: none;
+          transition: border-color 0.2s ease;
+          text-align: center;
+        }
+
+        .cta-input:focus {
+          border-color: #b5657a;
+          background: rgba(255,255,255,0.95);
+        }
+
+        .cta-input::placeholder {
+          color: #b5a0a0;
+        }
+
+        .cta-success {
+          font-family: "Montserrat", sans-serif;
+          font-size: 20px;
+          font-weight: 600;
+          color: #b5657a;
+          padding: 30px;
+          background: rgba(255,255,255,0.7);
+          border-radius: 20px;
+          max-width: 420px;
+          margin: 0 auto;
+          line-height: 1.6;
+        }
+
+        .cta-error {
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          color: #c0392b;
+          margin: 0;
+        }
+
         @media screen and (max-width: 1199px) {
           .cta-section {
             padding: 80px 20px;
@@ -298,16 +378,39 @@ const PriceCtaSection: React.FC = () => {
         <div className="cta-container">
           <h2 className="cta-title text-center">Заказать мозаику</h2>
           <p className="cta-subtitle">
-            Присылайте фото в WhatsApp/Telegram/МАХ +7-952-067-20-14 или пишите в личные сообщения. Макет бесплатно!
+            Оставьте имя и номер телефона — перезвоним, поможем выбрать размер и пришлём бесплатный макет!
           </p>
-          <div className="cta-buttons">
-            <a href="https://ok.ru/group/56567832182852/messages" target="_blank" rel="noopener noreferrer" className="cta-button">
-              Заказать макет
-            </a>
-            <a href="https://ok.ru/oplatatova" target="_blank" rel="noopener noreferrer" className="cta-button secondary">
-              Наше сообщество
-            </a>
-          </div>
+
+          {status === "success" ? (
+            <div className="cta-success">
+              Спасибо! Мы перезвоним вам в ближайшее время 🌸
+            </div>
+          ) : (
+            <form className="cta-form" onSubmit={handleSubmit}>
+              <input
+                className="cta-input"
+                type="text"
+                placeholder="Ваше имя"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <input
+                className="cta-input"
+                type="tel"
+                placeholder="+7-900-000-00-00"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+              <button className="cta-button" type="submit" disabled={status === "loading"}>
+                {status === "loading" ? "Отправляем..." : "Заказать обратный звонок"}
+              </button>
+              {status === "error" && (
+                <p className="cta-error">Что-то пошло не так. Позвоните нам: +7-952-067-20-14</p>
+              )}
+            </form>
+          )}
         </div>
       </section>
     </>
