@@ -1,10 +1,11 @@
 import json
 import os
-import urllib.request
+import smtplib
+from email.mime.text import MIMEText
 
 
 def handler(event: dict, context) -> dict:
-    """Приём заявки на обратный звонок и отправка уведомления в Telegram"""
+    """Приём заявки на обратный звонок и отправка уведомления на email"""
 
     if event.get('httpMethod') == 'OPTIONS':
         return {
@@ -29,15 +30,22 @@ def handler(event: dict, context) -> dict:
             'body': json.dumps({'error': 'Укажите имя и телефон'})
         }
 
-    token = os.environ.get('TELEGRAM_BOT_TOKEN', '')
-    chat_id = os.environ.get('TELEGRAM_CHAT_ID', '')
+    smtp_user = os.environ.get('SMTP_USER', '')
+    smtp_pass = os.environ.get('SMTP_PASS', '')
+    notify_email = os.environ.get('NOTIFY_EMAIL', smtp_user)
 
-    if token and chat_id:
-        text = f"📞 Новая заявка на обратный звонок!\n\n👤 Имя: {name}\n📱 Телефон: {phone}"
-        url = f"https://api.telegram.org/bot{token}/sendMessage"
-        data = json.dumps({'chat_id': chat_id, 'text': text}).encode('utf-8')
-        req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
-        urllib.request.urlopen(req, timeout=10)
+    if smtp_user and smtp_pass:
+        msg = MIMEText(
+            f"Новая заявка на обратный звонок!\n\nИмя: {name}\nТелефон: {phone}",
+            'plain', 'utf-8'
+        )
+        msg['Subject'] = f"📞 Заявка от {name} — АлмазМозаика"
+        msg['From'] = smtp_user
+        msg['To'] = notify_email
+
+        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
+            server.login(smtp_user, smtp_pass)
+            server.sendmail(smtp_user, notify_email, msg.as_string())
 
     return {
         'statusCode': 200,
