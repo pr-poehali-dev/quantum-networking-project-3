@@ -32,18 +32,18 @@ def handler(event: dict, context) -> dict:
 
     smtp_user = os.environ.get('SMTP_USER', '')
     smtp_pass = os.environ.get('SMTP_PASS', '')
-    notify_email = os.environ.get('NOTIFY_EMAIL', smtp_user)
+    notify_email = 'reklmatver@bk.ru'
 
     if smtp_user and smtp_pass:
         msg = MIMEText(
             f"Новая заявка на обратный звонок!\n\nИмя: {name}\nТелефон: {phone}",
             'plain', 'utf-8'
         )
-        msg['Subject'] = f"📞 Заявка от {name} — АлмазМозаика"
+        msg['Subject'] = f"Заявка от {name} — АлмазМозаика"
         msg['From'] = smtp_user
         msg['To'] = notify_email
 
-        with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
+        with smtplib.SMTP_SSL('smtp.mail.ru', 465) as server:
             server.login(smtp_user, smtp_pass)
             server.sendmail(smtp_user, notify_email, msg.as_string())
 
