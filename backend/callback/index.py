@@ -22,6 +22,7 @@ def handler(event: dict, context) -> dict:
     body = json.loads(event.get('body') or '{}')
     name = body.get('name', '').strip()
     phone = body.get('phone', '').strip()
+    message = body.get('message', '').strip()
 
     if not name or not phone:
         return {
@@ -35,10 +36,10 @@ def handler(event: dict, context) -> dict:
     notify_email = 'reklmatver@bk.ru'
 
     if smtp_user and smtp_pass:
-        msg = MIMEText(
-            f"Новая заявка на обратный звонок!\n\nИмя: {name}\nТелефон: {phone}",
-            'plain', 'utf-8'
-        )
+        text = f"Новая заявка!\n\nИмя: {name}\nТелефон: {phone}"
+        if message:
+            text += f"\nСообщение: {message}"
+        msg = MIMEText(text, 'plain', 'utf-8')
         msg['Subject'] = f"Заявка от {name} — АлмазМозаика"
         msg['From'] = smtp_user
         msg['To'] = notify_email

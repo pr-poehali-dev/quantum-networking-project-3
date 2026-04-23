@@ -1,6 +1,36 @@
 import type React from "react"
+import { useState } from "react"
+
+const CALLBACK_URL = "https://functions.poehali.dev/bd453b74-7d83-4ef1-8335-07a2a33b1885"
 
 const PriceCtaSection: React.FC = () => {
+  const [name, setName] = useState("")
+  const [phone, setPhone] = useState("")
+  const [message, setMessage] = useState("")
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus("loading")
+    try {
+      const res = await fetch(CALLBACK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, message }),
+      })
+      if (res.ok) {
+        setStatus("success")
+        setName("")
+        setPhone("")
+        setMessage("")
+      } else {
+        setStatus("error")
+      }
+    } catch {
+      setStatus("error")
+    }
+  }
+
   return (
     <>
       <style>{`
@@ -197,6 +227,137 @@ const PriceCtaSection: React.FC = () => {
           border: 2px solid #b5657a;
         }
 
+        .contact-section {
+          padding: 80px 30px;
+          background-color: #f0e4e8;
+        }
+
+        .contact-container {
+          max-width: 600px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .contact-title {
+          font-family: "Montserrat", sans-serif;
+          font-size: clamp(28px, 6vw, 48px);
+          font-weight: 700;
+          color: #3d2b2b;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          margin: 0 0 12px;
+        }
+
+        .contact-subtitle {
+          font-family: "Montserrat", sans-serif;
+          font-size: clamp(14px, 2vw, 18px);
+          color: #9a7a7a;
+          line-height: 1.6;
+          margin: 0 0 40px;
+        }
+
+        .contact-form {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .contact-input,
+        .contact-textarea {
+          width: 100%;
+          padding: 16px 24px;
+          border: 2px solid rgba(181,101,122,0.25);
+          border-radius: 16px;
+          font-family: "Montserrat", sans-serif;
+          font-size: 15px;
+          color: #3d2b2b;
+          background: rgba(255,255,255,0.8);
+          outline: none;
+          transition: border-color 0.2s ease;
+          box-sizing: border-box;
+        }
+
+        .contact-input:focus,
+        .contact-textarea:focus {
+          border-color: #b5657a;
+          background: #fff;
+        }
+
+        .contact-input::placeholder,
+        .contact-textarea::placeholder {
+          color: #b5a0a0;
+        }
+
+        .contact-textarea {
+          resize: vertical;
+          min-height: 120px;
+          border-radius: 16px;
+        }
+
+        .contact-submit {
+          padding: 18px 40px;
+          background: #b5657a;
+          color: #fff;
+          border: none;
+          border-radius: 50px;
+          font-family: "Montserrat", sans-serif;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          letter-spacing: 0.06em;
+        }
+
+        .contact-submit:hover:not(:disabled) {
+          background: #9a4d62;
+        }
+
+        .contact-submit:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+
+        .contact-success {
+          font-family: "Montserrat", sans-serif;
+          font-size: 18px;
+          font-weight: 600;
+          color: #b5657a;
+          padding: 30px;
+          background: rgba(255,255,255,0.8);
+          border-radius: 20px;
+          line-height: 1.6;
+        }
+
+        .contact-error {
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          color: #c0392b;
+          margin: 0;
+        }
+
+        .contact-divider {
+          width: 80px;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+          margin: 0 auto 40px;
+        }
+
+        @media screen and (max-width: 767px) {
+          .contact-section {
+            padding: 44px 16px;
+          }
+          .contact-input,
+          .contact-textarea {
+            padding: 14px 18px;
+            font-size: 14px;
+          }
+          .contact-submit {
+            font-size: 14px;
+            padding: 14px 24px;
+          }
+        }
+
         .cta-form {
           display: flex;
           flex-direction: column;
@@ -360,6 +521,53 @@ const PriceCtaSection: React.FC = () => {
               Наше сообщество
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="contact-section" id="contact">
+        <div className="contact-container">
+          <h2 className="contact-title">Обратная связь</h2>
+          <div className="contact-divider"></div>
+          <p className="contact-subtitle">
+            Есть вопросы? Заполните форму — мы свяжемся с вами в ближайшее время
+          </p>
+
+          {status === "success" ? (
+            <div className="contact-success">
+              Спасибо! Мы получили ваше сообщение и свяжемся с вами в ближайшее время 🌸
+            </div>
+          ) : (
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <input
+                className="contact-input"
+                type="text"
+                placeholder="Ваше имя"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <input
+                className="contact-input"
+                type="tel"
+                placeholder="Номер телефона"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+              <textarea
+                className="contact-textarea"
+                placeholder="Ваш вопрос или комментарий (необязательно)"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+              <button className="contact-submit" type="submit" disabled={status === "loading"}>
+                {status === "loading" ? "Отправляем..." : "Отправить сообщение"}
+              </button>
+              {status === "error" && (
+                <p className="contact-error">Не удалось отправить. Позвоните нам: +7-952-067-20-14</p>
+              )}
+            </form>
+          )}
         </div>
       </section>
     </>
