@@ -1,4 +1,6 @@
 import { Facebook, Instagram, Twitter, Github, Mail, MapPin, Phone } from "lucide-react"
+import { useEffect, useState } from "react"
+import func2url from "../../backend/func2url.json"
 
 const data = {
   facebookLink: "https://ok.ru/profile/572872647252",
@@ -68,6 +70,23 @@ const contactInfo = [
 ]
 
 export default function Footer() {
+  const [visits, setVisits] = useState<number | null>(null)
+
+  useEffect(() => {
+    const counted = sessionStorage.getItem("visit_counted")
+    if (!counted) {
+      fetch(func2url.visits, { method: "POST" })
+        .then(r => r.json())
+        .then(d => { setVisits(d.count); sessionStorage.setItem("visit_counted", "1") })
+        .catch(() => {})
+    } else {
+      fetch(func2url.visits)
+        .then(r => r.json())
+        .then(d => setVisits(d.count))
+        .catch(() => {})
+    }
+  }, [])
+
   return (
     <>
       <style>{`
@@ -450,6 +469,11 @@ export default function Footer() {
             <p className="copyright">
               2025 <a href="https://poehali.dev">poehali.dev</a>
             </p>
+            {visits !== null && (
+              <span className="copyright" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                👁 Посещений: <strong>{visits.toLocaleString("ru-RU")}</strong>
+              </span>
+            )}
             <div className="footer-legal">
               <a href="/privacy">Политика конфиденциальности</a>
               <a href="/terms">Условия использования</a>
