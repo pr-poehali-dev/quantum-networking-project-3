@@ -33,7 +33,7 @@ def handler(event: dict, context) -> dict:
 
     smtp_user = os.environ.get('SMTP_USER', '')
     smtp_pass = os.environ.get('SMTP_PASS', '')
-    notify_email = 'garik564820@yandex.ru'
+    notify_email = 'reklamatver@bk.ru'
 
     if smtp_user and smtp_pass:
         text = f"Новая заявка с сайта АлмазМозаика!\n\nИмя: {name}\nТелефон: {phone}"
