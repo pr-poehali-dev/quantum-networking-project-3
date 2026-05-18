@@ -44,7 +44,7 @@ def handler(event: dict, context) -> dict:
         msg['From'] = smtp_user
         msg['To'] = notify_email
 
-        with smtplib.SMTP_SSL('smtp.yandex.ru', 465) as server:
+        with smtplib.SMTP_SSL('smtp.mail.ru', 465) as server:
             server.login(smtp_user, smtp_pass)
             server.sendmail(smtp_user, notify_email, msg.as_string())
 
