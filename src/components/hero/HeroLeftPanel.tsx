@@ -79,6 +79,19 @@ const HeroLeftPanel: React.FC = () => {
       </a>
 
       <a
+        href="https://ok.ru/profile/572872647252"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="max-link ok-link"
+      >
+        <svg className="max-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#f7931e" />
+          <text x="50%" y="56%" dominantBaseline="middle" textAnchor="middle" fill="#fff" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="15">ОК</text>
+        </svg>
+        Добавить в друзья в Одноклассниках
+      </a>
+
+      <a
         href="https://link.ok.ru/AmUO1"
         target="_blank"
         rel="noopener noreferrer"
