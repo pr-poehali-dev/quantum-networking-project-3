@@ -460,6 +460,9 @@ export default function Footer() {
                   <li className="link-item">
                     <a href="https://ok.ru/group/56567832182852/messages" target="_blank" rel="noopener noreferrer">Написать в Одноклассниках</a>
                   </li>
+                  <li className="link-item">
+                    <a href="https://ok.ru/profile/572872647252" target="_blank" rel="noopener noreferrer">Добавить в друзья в ОК</a>
+                  </li>
                 </ul>
               </div>
             </div>
