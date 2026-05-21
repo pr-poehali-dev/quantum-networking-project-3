@@ -31,6 +31,13 @@ const reviews = [
     role: "Клиент",
     text: "Огромное спасибо. Картинка 70/50, очень переживала, но оказалось напрасно. Всё очень хорошо, всё красочно, страз очень много осталось. Заказывала невесточке, жду день рождения. Скоро закажу доченьке. Спасибо!!!",
   },
+  {
+    initials: "ЮБ",
+    name: "Юбиляр 50 лет",
+    role: "Клиент",
+    text: "Мама, ты лучшая! 💖 Мой юбилей 50 лет и самый трогательный подарок! Мама подарила мне алмазную мозаику по фотографии размером 50×40 см, с круглыми стразами — это придаёт работе особую глубину и блеск. ✨ Когда я увидел своё фото, превращённое в будущую картину, просто потерял дар речи! Мамочка, спасибо тебе огромное за этот невероятный подарок! Ты всегда умеешь угадать, что нужно моей душе. Я тебя очень люблю! 😘",
+    image: "https://cdn.poehali.dev/projects/28e6e3c4-9ab2-48cb-8301-9024486fcf9f/bucket/af03e0b8-81fe-4964-baa5-d0234490ec75.jpg",
+  },
 ]
 
 const TestimonialsSection: React.FC = () => {
@@ -203,6 +210,13 @@ const TestimonialsSection: React.FC = () => {
           <div className="testimonials-marquee">
             {doubled.map((r, i) => (
               <div className="testimonial-card" key={i}>
+                {r.image && (
+                  <img
+                    src={r.image}
+                    alt="Готовая мозаика"
+                    style={{ width: "100%", borderRadius: "12px", marginBottom: "20px", objectFit: "cover", maxHeight: "220px" }}
+                  />
+                )}
                 <p className="testimonial-quote">"{r.text}"</p>
                 <div className="testimonial-author">
                   <div className="author-avatar">{r.initials}</div>
