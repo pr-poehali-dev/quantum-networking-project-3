@@ -1,24 +1,12 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 
-const VISITS_URL = "https://functions.poehali.dev/e4addbee-a509-4b12-be37-13fd23afd252"
 const TEXTS = ["МОЗАИКУ ПО ЛЮБОМУ ФОТО", "ШЕДЕВР ИЗ ВАШЕГО ФОТО"]
 
 const HeroLeftPanel: React.FC = () => {
   const [currentText, setCurrentText] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-  const [visitCount, setVisitCount] = useState<number | null>(null)
-
-  useEffect(() => {
-    fetch(VISITS_URL, { method: "POST" })
-      .then((r) => r.json())
-      .then((data) => {
-        const raw = typeof data === "string" ? JSON.parse(data) : data
-        setVisitCount(raw.count)
-      })
-      .catch(() => {})
-  }, [])
 
   useEffect(() => {
     const typeSpeed = isDeleting ? 40 : 100
@@ -137,14 +125,6 @@ const HeroLeftPanel: React.FC = () => {
         </div>
       </div>
 
-      {visitCount !== null && (
-        <div className="visit-counter">
-          <div className="visit-counter-dot" />
-          <p className="visit-counter-text">
-            Нас посетили <span>{visitCount.toLocaleString("ru-RU")}</span> раз
-          </p>
-        </div>
-      )}
     </div>
   )
 }
